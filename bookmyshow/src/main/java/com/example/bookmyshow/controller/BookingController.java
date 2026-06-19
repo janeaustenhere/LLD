@@ -4,10 +4,7 @@ import com.example.bookmyshow.model.Booking;
 import com.example.bookmyshow.services.BookingService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/booking")
@@ -21,7 +18,7 @@ public class BookingController {
     }
 
     @PostMapping("/createBooking")
-    public ResponseEntity<Booking> createBooking(Booking booking){
+    public ResponseEntity<Booking> createBooking(@RequestBody Booking booking){
         Booking createBooking = null;
         try{
             createBooking =   bookingService.createBooking(booking);
@@ -33,7 +30,7 @@ public class BookingController {
     }
 
     @PostMapping("/confirmBooking")
-    public ResponseEntity<Booking> confirmBooking(Booking booking){
+    public ResponseEntity<Booking> confirmBooking(@RequestBody Booking booking){
         Booking confirmedBooking = null;
         try{
             confirmedBooking = bookingService.confirmBooking(booking);
@@ -45,7 +42,7 @@ public class BookingController {
     }
 
     @GetMapping("/getBookingDetails/{bookingId}")
-    public ResponseEntity<Booking> getBookingDetails(String bookingId){
+    public ResponseEntity<Booking> getBookingDetails(@PathVariable String bookingId){
         Booking booking = null;
         try{
             booking = bookingService.getBookingDetails(bookingId);
