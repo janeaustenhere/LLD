@@ -52,7 +52,7 @@ public class BookingController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(bookingDetails);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(bookingDetails);
+        return ResponseEntity.status(HttpStatus.OK).body(bookingDetails);
     }
 
 

@@ -48,7 +48,7 @@ public class BranchController {
            return  ResponseEntity.status(HttpStatus.NOT_FOUND).body(branch);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(branch);
+        return ResponseEntity.status(HttpStatus.OK).body(branch);
 
     }
 
@@ -62,7 +62,7 @@ public class BranchController {
            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(branchList);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(branchList);
+        return ResponseEntity.status(HttpStatus.OK).body(branchList);
 
     }
 
