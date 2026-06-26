@@ -41,7 +41,7 @@ public class MovieController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(movie);
+        return ResponseEntity.status(HttpStatus.OK).body(movie);
     }
 
     @GetMapping("/getMovieListByName/{movieName}")
@@ -53,7 +53,7 @@ public class MovieController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(movieList);
+        return ResponseEntity.status(HttpStatus.OK).body(movieList);
     }
 
     @GetMapping("/getAllMovies")
@@ -65,6 +65,6 @@ public class MovieController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(movieList);
+        return ResponseEntity.status(HttpStatus.OK).body(movieList);
     }
 }

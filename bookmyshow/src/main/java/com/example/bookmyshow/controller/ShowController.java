@@ -55,7 +55,7 @@ public class ShowController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(showList);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(showList);
+        return ResponseEntity.status(HttpStatus.OK).body(showList);
 
     }
 
@@ -69,7 +69,7 @@ public class ShowController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(showList);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(showList);
+        return ResponseEntity.status(HttpStatus.OK).body(showList);
 
     }
 }

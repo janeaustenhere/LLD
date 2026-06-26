@@ -50,6 +50,6 @@ public class BookingController {
             ResponseEntity.status(HttpStatus.NOT_FOUND).body(booking);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(booking);
+        return ResponseEntity.status(HttpStatus.OK).body(booking);
     }
 }

@@ -70,7 +70,7 @@ public class TheatreController {
             ResponseEntity.status(HttpStatus.NOT_MODIFIED).body(null);
         }
 
-        return  ResponseEntity.status(HttpStatus.FOUND).body(theatre);
+        return  ResponseEntity.status(HttpStatus.OK).body(theatre);
     }
 
     @GetMapping("/getTheatreListByCity/{city}")
@@ -82,7 +82,7 @@ public class TheatreController {
             ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
 
-        return  ResponseEntity.status(HttpStatus.FOUND).body(theatreList);
+        return  ResponseEntity.status(HttpStatus.OK).body(theatreList);
     }
 
 
