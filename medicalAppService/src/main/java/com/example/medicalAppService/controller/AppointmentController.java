@@ -44,7 +44,7 @@ public class AppointmentController {
            ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
 
-       return  ResponseEntity.status(HttpStatus.FOUND).body(allBookedAppointment);
+       return  ResponseEntity.status(HttpStatus.OK).body(allBookedAppointment);
     }
 
     @PostMapping("/cancelAppointment/{appointmentId}")

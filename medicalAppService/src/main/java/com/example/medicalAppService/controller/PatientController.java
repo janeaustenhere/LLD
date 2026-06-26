@@ -42,7 +42,7 @@ public class PatientController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ArrayList<>());
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(patientList);
+        return ResponseEntity.status(HttpStatus.OK).body(patientList);
 
     }
 
@@ -55,7 +55,7 @@ public class PatientController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(patient);
+        return ResponseEntity.status(HttpStatus.OK).body(patient);
 
 
     }

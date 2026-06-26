@@ -43,7 +43,7 @@ public class DoctorController {
         } catch (Exception e) {
             ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
-        return ResponseEntity.status(HttpStatus.FOUND).body(doctor);
+        return ResponseEntity.status(HttpStatus.OK).body(doctor);
 
     }
 
@@ -57,7 +57,7 @@ public class DoctorController {
             ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ArrayList<>());
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(doctorList);
+        return ResponseEntity.status(HttpStatus.OK).body(doctorList);
 
     }
 
@@ -72,7 +72,7 @@ public class DoctorController {
             ResponseEntity.status(HttpStatus.NOT_FOUND).body(new ArrayList<>());
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(doctorList);
+        return ResponseEntity.status(HttpStatus.OK).body(doctorList);
 
     }
 
