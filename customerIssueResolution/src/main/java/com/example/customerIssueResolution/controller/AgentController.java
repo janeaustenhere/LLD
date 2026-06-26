@@ -36,7 +36,7 @@ public class AgentController {
     public ResponseEntity<List<Issue>> getAgentAllHistory(@PathVariable String agentId){
 
         List<Issue> issues = agentService.viewAgentAllHistory(agentId);
-        return ResponseEntity.status(HttpStatus.FOUND).body(issues);
+        return ResponseEntity.status(HttpStatus.OK).body(issues);
 
     }
 }
