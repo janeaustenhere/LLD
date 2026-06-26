@@ -89,7 +89,7 @@ public class ParkingLotController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(parkingLot);
+        return ResponseEntity.status(HttpStatus.OK).body(parkingLot);
     }
 
 

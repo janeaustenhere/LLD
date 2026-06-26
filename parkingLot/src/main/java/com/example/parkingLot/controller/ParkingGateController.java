@@ -46,7 +46,7 @@ public class ParkingGateController {
            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ticket);
         }
 
-        return ResponseEntity.status(HttpStatus.FOUND).body(ticket);
+        return ResponseEntity.status(HttpStatus.OK).body(ticket);
 
     }
 
