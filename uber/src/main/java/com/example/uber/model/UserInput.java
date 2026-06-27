@@ -14,4 +14,5 @@ public class UserInput {
     UserType userType;
     Vehicle vehicle;
     DrivingLicense drivingLicense;
+    Location driverLocation;
 }

@@ -64,11 +64,11 @@ public class DriverController {
         Driver driver = null;
         try
         {
-            driver = driverService.addDriver(userInput);
+            driver = driverService.updateVehicle(userInput);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_MODIFIED).body(driver);
         }
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(driver);
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(driver);
     }
 }

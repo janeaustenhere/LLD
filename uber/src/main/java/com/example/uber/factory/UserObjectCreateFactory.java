@@ -9,6 +9,7 @@ import com.example.uber.model.UserInput;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 @Component
 public class UserObjectCreateFactory {
@@ -34,6 +35,8 @@ public class UserObjectCreateFactory {
                         .email(userInput.getEmail())
                         .userName(userInput.getUserName())
                         .vehicle(userInput.getVehicle())
+                        .isAvailable(new AtomicBoolean(true))
+                        .currentLocation(userInput.getDriverLocation())
                         .rating(null).build();
             }
 

@@ -9,10 +9,10 @@ public class Location {
     double longitude;
     double latitude;
 
-    double getDistance(Location otherLocation){
+    public double getDistance(Location otherLocation){
         double longitudeDiff =  Math.abs(this.longitude - otherLocation.longitude);
         double latitudeDiff = Math.abs(this.latitude - otherLocation.latitude);
-
-        return Math.sqrt(longitudeDiff* longitudeDiff - latitudeDiff*latitudeDiff);
+        double diff =  Math.abs(longitudeDiff* longitudeDiff - latitudeDiff*latitudeDiff);
+        return Math.sqrt(diff);
     }
 }

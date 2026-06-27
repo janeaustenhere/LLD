@@ -2,6 +2,7 @@ package com.example.uber.service;
 
 
 import com.example.uber.factory.UserObjectCreateFactory;
+import com.example.uber.model.Driver;
 import com.example.uber.model.Rider;
 import com.example.uber.model.UserInput;
 import com.example.uber.repository.UserRepository;
@@ -34,6 +35,8 @@ public class UserService {
     public List<Rider> getAllUsers (){
         return userRepository.getAllRiderList();
     }
+
+
 
 
 }

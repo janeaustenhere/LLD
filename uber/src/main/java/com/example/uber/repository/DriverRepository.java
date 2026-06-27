@@ -2,6 +2,7 @@ package com.example.uber.repository;
 
 import com.example.uber.model.Driver;
 import com.example.uber.model.Rider;
+import com.example.uber.model.UserInput;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -26,5 +27,13 @@ public class DriverRepository {
 
     public List<Driver> getAllDriverList(){
         return driverMap.values().stream().toList();
+    }
+
+    public Driver updateVehicle(Driver driver){
+
+        Driver driverToUpdate = driverMap.get(driver.getUserId());
+        driverToUpdate.setVehicle(driver.getVehicle());
+        return driverToUpdate;
+
     }
 }

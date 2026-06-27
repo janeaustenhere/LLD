@@ -14,6 +14,8 @@ public abstract class Product {
     double farePerHour;
     double farePerKM;
     int capacity;
+    String productId;
+    String name;
 
     abstract ProductType getProductType();
 
